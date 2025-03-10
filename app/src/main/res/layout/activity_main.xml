@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+
+        android:text="Zamów kawę!"
+
+        android:background="#8c5f34"
+        android:textColor="@color/black"
+        android:textSize="45dp"
+        android:gravity="center"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/coffee_selection"
+        >
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/Espresso"
+            android:text="Espresso"
+            android:textSize="26sp"
+            />
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/Cappucinno"
+            android:text="Cappucinno"
+            android:textSize="26sp"
+        />
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/Latte"
+            android:text="Latte"
+            android:textSize="26sp"
+            />
+    </RadioGroup>
+
+    <!-- TODO: Obrazek kawy w ImageView powinien się zmieniać w zależności od wyboru kawy: espresso.png dla Espresso, cappuccino.png dla Cappuccino, latte.png dla Latte. -->
+
+    <!-- TODO: mleko i cukier za pomoca checkbox -->
+
+    <!-- TODO: wybieranie ilosci zamowionych kaw z uzyciem SeekBar -->
+
+    <!-- TODO: po nacisnieciu Button wyswietl Toast ktory mowi co zostalo zamowione -->
+
+    <!--
+    wskazowki:
+    - Użyj widżetu ImageView do wyświetlenia odpowiedniego obrazka kawy w zależności od wyboru użytkownika.
+    - Ilość kaw powinna być dynamicznie wyświetlana w TextView w zależności od pozycji suwaka.
+    - Zamówienie powinno być przekazywane do Toast lub Log.
+    -->
+
+</LinearLayout>

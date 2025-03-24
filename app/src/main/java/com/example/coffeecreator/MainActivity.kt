@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         }
         val coffeeRadioGroup: RadioGroup = findViewById(R.id.coffee_selection) // oznaczenie grupy radio buttonow jako zmienna coffeeRadioGroup
         val image = findViewById<ImageView>(R.id.myImage)
-        var selectedCoffee: String = "" // deklaracja pustej zmiennej
 
         coffeeRadioGroup.setOnCheckedChangeListener { _, checkedId ->
             when(checkedId) {
@@ -34,6 +33,5 @@ class MainActivity : AppCompatActivity() {
                 else -> R.drawable.image_not_found
             }
         }
-        // TODO: fix
     }
 }
